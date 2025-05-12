@@ -1,0 +1,2 @@
+echo "*.svg binary" >> .gitattributes
+git add .gitattributes
