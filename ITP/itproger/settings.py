@@ -112,6 +112,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / "main/static", # Путь относительно корня проекта (где лежит manage.py)
     # "/var/www/static/",
 ]

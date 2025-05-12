@@ -16,14 +16,20 @@ aside img {
     width: 80px;
     float: left;
 }
-
 aside .logo {
+    font-size: 46px;
+    margin-left: 90px;
+    font-weight: bold;
+    position: relative;
+    top: -65px;
+}
+/* aside .logo {
     font-size: 40px;
     margin-left: 10px;
     font-weight: bold;
     position: relative;
-    top: 5px;
-}
+    top: 22px;
+} */
 
 aside h3 {
     margin-top: 50px;
