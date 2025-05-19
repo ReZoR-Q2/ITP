@@ -12,7 +12,11 @@ class NewsDetailView(DetailView):
     model = Articles
     template_name = 'news/details_view.html'
     context_object_name = 'article'
-
+    def get_object(self, queryset=None):
+        try:
+            return super().get_object(queryset)
+        except Http404:
+            return None
 
 
 def create(request):

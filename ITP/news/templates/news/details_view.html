@@ -1,11 +1,11 @@
 {% extends "main/layout.html" %}
 
-{% block title %}Новости на сайте{% endblock %}  
+{% block title %}{{ article.title }}{% endblock %}  
 
 {% block content %}
     <div class="features">
-        <h1>{{ atricle.title }}</h1>
-        <p>{{ atricle.date }}</p>
-        <p>{{ atricle.full_text }}</p>
+        <h1>{{ article.title }}</h1>  <!-- Исправлено с atricle на article -->
+        <p>{{ article.date }}</p>
+        <p>{{ article.full_text }}</p>
     </div>
 {% endblock %}
