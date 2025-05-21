@@ -16,3 +16,9 @@
         </form>
     </div>
 {% endblock %}
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <span>{{ error }}</span>
+    <button class="btn btn-success" type="submit">Добавить статью</button>
+</form>

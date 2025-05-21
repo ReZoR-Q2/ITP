@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Articles
 from .forms import ArticlesForm
-from django.views.generic import DetailView
+from django.views.generic import DetailView, UpdateView
 
 
 def news_home(request):
@@ -17,6 +17,15 @@ class NewsDetailView(DetailView):
             return super().get_object(queryset)
         except Http404:
             return None
+        
+class NewsUpdateView(UpdateView):
+    model = Articles
+    template_name = 'news/create.html'
+    form_class = ArticlesForm
+    success_url = '/news/'  # или reverse_lazy('news_home')
+
+
+
 
 
 def create(request):
