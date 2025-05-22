@@ -30,7 +30,8 @@ class NewsDeleteView(DeleteView):
     template_name = 'news/news-delete.html'
     success_url = '/news/'
 
-
+def contacts(request):
+    return render(request, 'news/contacts.html')
 
 
 def create(request):
